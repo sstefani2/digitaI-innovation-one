@@ -7,5 +7,7 @@ One
 
 # Melhorias Implementadas
 Utilizada uma imagem para representar o X e O
+
 Verificado se terminou em empate
+
 Utilizado if ternário
