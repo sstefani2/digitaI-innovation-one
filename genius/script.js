@@ -32,7 +32,7 @@ let lightColor = (element, number) => {
     }, number - 250);
     setTimeout(() => {
         element.classList.remove('selected');
-    });
+    },number);
 }
 
 //checa se os botoes clicados são os mesmos da ordem gerada no jogo
@@ -44,7 +44,12 @@ let checkOrder = () => {
         }
     }
     if(clickedOrder.length == order.length) {
-        alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`);
+        //alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`);
+		document.getElementById("texto").innerHTML = `Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`;
+        document.getElementById("texto").style.display = 'block';
+        setTimeout(() => {
+            document.getElementById("texto").style.display = 'none';
+        }, 1000);
         nextLevel();
     }
 }
